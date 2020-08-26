@@ -1,0 +1,212 @@
+/*ШАПКА*/
+
+.header {
+  height: 60px;
+  font-family: $primary-font;
+  background-color: $primary-white-color;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    width: 738px;
+  }
+  .logo {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #000000;
+    // margin-right: 277px;
+    @media screen and (min-width: 768px) {
+      margin-right: 81px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+    .logo-word {
+      color: $accent-color;
+    }
+  }
+}
+.mobile-menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-right: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-nav .icon-close {
+  display: none;
+}
+.mobile-nav .is-open .icon-close {
+  display: block;
+}
+.mobile-nav .is-open .icon-burger {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navigation-item-link {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $primary-title-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    top: 60px;
+    left: 0;
+    width: 480;
+    height: 393px;
+    background-color: #fff;
+    padding-top: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.let {
+  width: 16px;
+  height: 11px;
+  fill: $primary-text-color;
+  margin: auto;
+  margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.phone {
+  width: 10px;
+  height: 15px;
+  fill: $primary-text-color;
+  margin: auto;
+  margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    .phone {
+      fill: $accent-color;
+    }
+  }
+  &:hover {
+    .let {
+      fill: $accent-color;
+    }
+  }
+  .header-address {
+    color: $primary-text-color;
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .studio::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    content: "";
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+  .portfolio::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    content: "";
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+.header-address {
+  color: $primary-text-color;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-address-menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.navigation-menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.navigation-item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+}
+.navigation-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.nav-desk {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    margin: 0;
+    padding: 0;
+  }
+}

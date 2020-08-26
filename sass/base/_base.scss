@@ -1,0 +1,46 @@
+.html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.body {
+  font-family: $primary-font;
+  background-color: $primary-white-color;
+  margin: 0;
+  padding: 0;
+}
+.h1 {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.secondary-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-title-color;
+  padding-top: 60px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1229px) {
+  .secondary-title {
+    padding-top: 94px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.18;
+  }
+}
