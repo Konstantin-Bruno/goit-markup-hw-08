@@ -81,7 +81,7 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  width: 1200px;
+  width: 1230px;
 }
 
 @media screen and (max-width: 767px) {
@@ -100,16 +100,8 @@
 
 /*ШАПКА*/
 .header {
-  height: 60px;
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    height: 80px;
-    width: 738px;
-  }
 }
 
 .header .logo {
@@ -131,6 +123,7 @@
   .header .logo {
     font-size: 26px;
     line-height: 1.19;
+    margin-right: 85px;
   }
 }
 
@@ -166,10 +159,15 @@
 }
 
 .mobile-nav {
-  display: flex;
-  justify-content: space-between;
+  width: 450px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation-item-link {
@@ -180,6 +178,14 @@
   letter-spacing: 0.02em;
   color: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 767px) {
+  .navigation-item-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .navigation-item-link:hover, .navigation-item-link:focus {
@@ -295,9 +301,34 @@
 }
 
 .header-address-menu {
-  display: block;
-  margin: 0;
+  display: flex;
+  margin-left: auto;
   padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header-address-menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header-address-item {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .header-address-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-address-item:not(:first-child) {
+    margin-left: 30px;
+  }
 }
 
 .navigation-menu {
@@ -310,22 +341,28 @@
 @media screen and (min-width: 768px) {
   .navigation-menu {
     display: flex;
+    align-items: center;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .navigation-item:not(:last-child) {
     margin-right: 50px;
+    position: relative;
   }
 }
 
-.navigation-item:not(:last-child) {
-  margin-bottom: 40px;
+@media screen and (max-width: 768px) {
+  .navigation-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .nav-desk {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -333,6 +370,45 @@
   .mobile-nav {
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .studio::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    content: "";
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
+  .portfolio::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    content: "";
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
+  .header-address {
+    display: flex;
+    color: #757575;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-address:hover, .header-address:focus {
+    color: #2196f3;
   }
 }
 
