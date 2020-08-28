@@ -16,7 +16,7 @@
     <!--Шапка сайта-->
     <header class="header">
       <div class="nav-desk container">
-        <div class="mobile-nav container">
+        <div class="mobile-nav">
           <nav class="navigation-list">
             <a class="logo link" href="./index.html" lang="en">
               <span class="logo-word">Web</span> Studio
@@ -28,7 +28,7 @@
               </svg>
             </button>
         </div>
-        <div class="menu is-open container" data-menu>
+        <div class="menu is-open" data-menu>
           <ul class="navigation-menu list">
             <li class="navigation-item">
               <a class="navigation-item-link link studio" href="./index.html">Студия</a>
@@ -63,10 +63,10 @@
 
     <!--Главный контейнер-->
     <main>
-      <section class="hero">
+      <div class="hero-contaiter container"><section class="hero">
         <h1 class="title">Эффективные решения для вашего бизнеса</h1>
         <button data-modal-open type="button" class="btn">Заказать услугу</button>
-      </section>
+      </section></div>
 
       <!--О нас-->
       <section class="about">
@@ -158,12 +158,12 @@
         <h2 class="secondary-title">Наша команда</h2>
         <ul class="team-list list container">
           <li class="team-item">
-            <img class="img"
-              src="./images/team/nikolay-kucherenko.jpg"
-              alt="Николай Кучеренко"
-              width="270"
-              height="260"
-            />
+             <picture>
+                 <source srcset="./images/team-mobile/nikolay-kucherenko.jpg 1x, ./images/team-mobile/nikolay-kucherenko@2x.jpg 2x" media="(max-width: 767px)">
+                  <source srcset="./images/team-tablet/nikolay-kucherenko.jpg 1x, ./images/team-tablet/nikolay-kucherenko@2x.jpg 2x" media="(max-width: 1199px)">
+                  <img class="img" srcset="./images/team/nikolay-kucherenko.jpg 1x, ./images/team/nikolay-kucherenko@2x.jpg 2x"
+                    src="./images/team/nikolay-kucherenko.jpg" alt="Николай Кучеренко" />
+                    </picture>
             <h3 class="team-list-item">Николай Кучеренко</h3>
             <p class="team-list-item-desc" lang="en">
               Product Designer
@@ -194,14 +194,13 @@
               </li>
             </ul>
           </li>
-
           <li class="team-item">
-            <img class="img"
-              src="./images/team/olha-ivanova.jpg"
-              alt="Ольга Иванова"
-              width="270"
-              height="260"
-            />
+                <picture>
+                 <source srcset="./images/team-mobile/olha-ivanova.jpg 1x, ./images/team-mobile/olha-ivanova@2x.jpg 2x" media="(max-width: 767px)">
+                  <source srcset="./images/team-tablet/olha-ivanova.jpg 1x, ./images/team-tablet/olha-ivanova@2x.jpg 2x" media="(max-width: 1199px)">
+                  <img class="img" srcset="./images/team/olha-ivanova.jpg 1x, ./images/team/olha-ivanova@2x.jpg 2x"
+                    src="./images/team/olha-ivanova.jpg" alt="Ольга Иванова" />
+                    </picture>
             <h3 class="team-list-item">Ольга Иванова</h3>
             <p class="team-list-item-desc" lang="en">
               Frontend Developer
@@ -235,12 +234,14 @@
             </ul>
             </li>
           <li class="team-item">
-            <img class="img"
-              src="./images/team/andrew-shevchenko.jpg"
-              alt="Андрей Шевченко"
-              width="270"
-              height="260"
-            />
+<picture>
+  <source srcset="./images/team-mobile/andrew-shevchenko.jpg 1x, ./images/team-mobile/andrew-shevchenko@2x.jpg 2x"
+    media="(max-width: 767px)">
+  <source srcset="./images/team-tablet/andrew-shevchenko.jpg 1x, ./images/team-tablet/andrew-shevchenko@2x.jpg 2x"
+    media="(max-width: 1199px)">
+  <img class="img" srcset="./images/team/andrew-shevchenko.jpg 1x, ./images/team/andrew-shevchenko@2x.jpg 2x"
+    src="./images/team/andrew-shevchenko.jpg" alt="Андрей Шевченко" />
+</picture>
             <h3 class="team-list-item">Андрей Шевченко</h3>
             <p class="team-list-item-desc" lang="en">
               Marketing
@@ -274,12 +275,14 @@
           </ul>
           </li>
             <li class="team-item">
-            <img class="img"
-              src="./images/team/ivan-nilolaev.jpg"
-              alt="Иван Николаев"
-              width="270"
-              height="260"
-            />
+          <picture>
+            <source srcset="./images/team-mobile/ivan-nilolaev.jpg 1x, ./images/team-mobile/ivan-nilolaev@2x.jpg 2x"
+              media="(max-width: 767px)">
+            <source srcset="./images/team-tablet/ivan-nilolaev.jpg 1x, ./images/team-tablet/ivan-nilolaev@2x.jpg 2x"
+              media="(max-width: 1199px)">
+            <img class="img" srcset="./images/team/ivan-nilolaev.jpg 1x, ./images/team/ivan-nilolaev@2x.jpg 2x"
+              src="./images/team/ivan-nilolaev.jpg" alt="Иван Николаев" />
+          </picture>
             <h3 class="team-list-item">Иван Николаев</h3>
             <p class="team-list-item-desc" lang="en">
               UI Designer
