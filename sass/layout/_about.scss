@@ -1,11 +1,5 @@
 /*О НАС*/
 
-.about-us-item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
 .about-us-list {
   display: block;
   font-style: normal;
@@ -56,6 +50,11 @@
     background-color: #f5f4fa;
     border-radius: 4px;
     margin-bottom: 30px;
+  }
+  .about-us-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
