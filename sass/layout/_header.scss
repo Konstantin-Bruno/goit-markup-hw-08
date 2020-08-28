@@ -48,8 +48,7 @@
 
 .mobile-nav {
   width: 450px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0;
 }
 .navigation-list {
   display: flex;
@@ -81,9 +80,8 @@
     position: absolute;
     flex-direction: column;
     text-align: center;
-    top: 60px;
+    top: 58px;
     left: 0;
-    width: 480;
     height: 393px;
     background-color: #fff;
     padding-top: 60px;
@@ -113,63 +111,47 @@
   margin: auto;
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  &:hover {
-    .phone {
-      fill: $accent-color;
-    }
-  }
-  &:hover {
-    .let {
-      fill: $accent-color;
-    }
-  }
-  .header-address {
-    color: $primary-text-color;
-    font-family: $primary-font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.header-address {
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .address {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
+.studio::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  content: "";
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+.portfolio::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  content: "";
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
 
-  .studio::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: block;
-    content: "";
-    height: 4px;
-    background-color: $accent-color;
-    border-radius: 2px;
-  }
-  .portfolio::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: block;
-    content: "";
-    height: 4px;
-    background-color: $accent-color;
-    border-radius: 2px;
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }
+  &:hover,
+  &:focus {
+    color: $accent-color;
   }
 }
+
 .header-address {
   color: $primary-text-color;
   font-family: "Roboto", sans-serif;
@@ -191,6 +173,16 @@
   padding: 0;
 }
 .header-address-item {
+  &:hover {
+    .phone {
+      fill: $accent-color;
+    }
+  }
+  &:hover {
+    .let {
+      fill: $accent-color;
+    }
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -199,6 +191,11 @@
   &:not(:first-child) {
     @media screen and (min-width: 768px) {
       margin-left: 30px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
     }
   }
 }
@@ -214,18 +211,25 @@
     margin: 0;
   }
 }
-.navigation-item:not(:last-child) {
-  @media screen and (min-width: 768px) {
-    margin-right: 50px;
-    position: relative;
+.navigation-item {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+      position: relative;
+    }
   }
-}
-.navigation-item:not(:last-child) {
-  @media screen and (max-width: 768px) {
-    margin-bottom: 40px;
+  .navigation-item &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
   }
 }
 .nav-desk {
+  position: relative;
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;

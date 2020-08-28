@@ -160,8 +160,7 @@
 
 .mobile-nav {
   width: 450px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0;
 }
 
 .navigation-list {
@@ -198,9 +197,8 @@
     position: absolute;
     flex-direction: column;
     text-align: center;
-    top: 60px;
+    top: 58px;
     left: 0;
-    width: 480;
     height: 393px;
     background-color: #fff;
     padding-top: 60px;
@@ -235,15 +233,7 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.phone:hover .phone {
-  fill: #2196f3;
-}
-
-.phone:hover .let {
-  fill: #2196f3;
-}
-
-.phone .header-address {
+.header-address {
   color: #757575;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -254,14 +244,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.phone .address {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.phone .studio::after {
+.studio::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -273,7 +256,7 @@
   border-radius: 2px;
 }
 
-.phone .portfolio::after {
+.portfolio::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -285,7 +268,7 @@
   border-radius: 2px;
 }
 
-.phone .portfolio::after:hover, .phone .portfolio::after:focus {
+.portfolio::after:hover, .portfolio::after:focus {
   color: #2196f3;
 }
 
@@ -318,6 +301,14 @@
   display: block;
 }
 
+.header-address-item:hover .phone {
+  fill: #2196f3;
+}
+
+.header-address-item:hover .let {
+  fill: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
   .header-address-item {
     display: flex;
@@ -328,6 +319,12 @@
 @media screen and (min-width: 768px) {
   .header-address-item:not(:first-child) {
     margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-address-item:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 
@@ -346,6 +343,12 @@
   }
 }
 
+.navigation-item {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
   .navigation-item:not(:last-child) {
     margin-right: 50px;
@@ -353,10 +356,14 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .navigation-item:not(:last-child) {
+@media screen and (max-width: 767px) {
+  .navigation-item .navigation-item:not(:last-child) {
     margin-bottom: 40px;
   }
+}
+
+.nav-desk {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
