@@ -423,10 +423,10 @@
   .header-address:hover, .header-address:focus {
     color: #2196f3;
   }
-  .header-address:hover .phone {
+  .header-address:hover .phone, .header-address:focus .phone {
     fill: #2196f3;
   }
-  .header-address:hover .let {
+  .header-address:hover .let, .header-address:focus .let {
     fill: #2196f3;
   }
 }

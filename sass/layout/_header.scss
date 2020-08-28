@@ -271,12 +271,14 @@
     &:focus {
       color: $accent-color;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       .phone {
         fill: $accent-color;
       }
     }
-    &:hover {
+    &:hover,
+    &:focus {
       .let {
         fill: $accent-color;
       }
