@@ -1,5 +1,8 @@
 /*HERO*/
-
+.hero {
+  margin-right: auto;
+  margin-left: auto;
+}
 @media screen and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(
